@@ -1,0 +1,44 @@
+@mixin round($angle: 10px) {
+  -webkit-border-radius: $angle;
+  -moz-border-radius: $angle;
+  -ms-border-radius: $angle;
+  border-radius: $angle;
+}
+
+@mixin triangle($direction:up, $color:#000, $size:100px) {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  @if ($direction == up){
+    border-color: transparent transparent $color;
+    border-width: 0 $size $size;
+  }
+  @if ($direction == down) {
+    border-color: $color transparent transparent transparent;
+    border-width: $size;
+  }
+  @if ($direction == left) {
+    border-color: transparent $color transparent transparent;
+    border-width: $size $size $size 0;
+  }
+  @if ($direction == right) {
+    border-color: transparent transparent transparent $color;
+    border-width: $size 0 $size $size;
+  }
+  @if ($direction == bottomright) {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 0 $size $size;
+  }
+  @if ($direction == bottomleft) {
+    border-color: transparent transparent transparent $color;
+    border-width: $size 0 0 $size;
+  }
+  @if ($direction == topleft) {
+    border-color: $color transparent transparent transparent;
+    border-width: $size $size 0 0;
+  }
+  @if ($direction == topright) {
+    border-color: transparent $color transparent transparent;
+    border-width: 0 $size $size 0;
+  }
+}

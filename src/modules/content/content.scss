@@ -1,0 +1,22 @@
+@import '../../func';
+@import '../../mixins';
+
+.text {
+  font-size: getPart(48, 50) + px;
+  color: getDarken(#0000d7, 20);
+  padding-bottom: 50px;
+}
+.foo {
+  position: relative;
+}
+.foo::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  bottom: 100%;
+  @include triangle(up, red, 50px);
+}
+ul {
+  list-style-type: decimal;
+}

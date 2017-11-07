@@ -1,0 +1,11 @@
+$color: red;
+$font-size: 18px;
+
+.footer {
+  background: $color;
+  color: #fff;
+
+  a {
+    font-size: $font-size - 2;
+  }
+}

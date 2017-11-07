@@ -1,0 +1,24 @@
+@function getPart($num, $percent) {
+  @return ($num * $percent)/100;
+}
+
+@function getDarken($color, $amount) {
+  @return darken($color, $amount);
+}
+
+@for $i from 1 through 10 {
+  .width#{$i} { width: 10% * $i;border: 1px solid greenyellow }
+}
+
+
+$s-min: 20;
+$s-max: 70;
+$l-min: 30;
+$l-max: 90;
+ul {
+  @for $i from 1 through 20 {
+    li:nth-child(#{$i}) {
+      background-color: hsl(random(360),$s-min+random($s-max+-$s-min),$l-min+random($l-max+-$l-min));
+    }
+  }
+}
