@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch",
-    "hmr": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --open",
-    "hmr:styles": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --open --env.styles"
+    "hmr": "webpack-dev-server --config ./webpack.config.js --open",
+    "hmr:styles": "webpack-dev-server --config ./webpack.config.js --open --env.styles"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +26,13 @@
   "dependencies": {
     "jquery": "^3.2.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dergaeva/test1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dergaeva/test1/issues"
+  },
+  "homepage": "https://github.com/Dergaeva/test1#readme",
   "description": ""
 }
